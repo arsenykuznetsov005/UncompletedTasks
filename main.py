@@ -16,8 +16,8 @@ def func(current_path: str):
                         # После этой операции в конце нашей строки пропадают какие-либо из перечисленных выше символом, и
                         # мы нормально может проверять на `.endswith()`.
                         if f'{current_path}{i}' not in dict_of_tasks:
-                            dict_of_tasks[f'{current_path}{i}'] = []  # Мы буквально добавляет список как элемент
-                        dict_of_tasks[f'{current_path}{i}'].append(line.strip())
+                            dict_of_tasks[i] = []  # Мы буквально добавляет список как элемент
+                        dict_of_tasks[i].append(line.strip())
                         # Оказывается, что на этапе dict_of_tasks[f'{current_path}{i}'] сразу возвращается значение,
                         # и пользуясь этим, мы используем списочный метод `.append()`.
 
