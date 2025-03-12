@@ -28,4 +28,10 @@ def func(current_path: str):
 
 target = getcwd()
 func(current_path=target)
-print(dict_of_tasks)
+for file_path, task in dict_of_tasks.items():
+    if len(task) > 1:
+        print(f'Path:\n{file_path}\nTasks:')
+        print(*task, sep='\n', end='\n\n\n')
+    elif len(task) == 1:
+        print(f'Path:\n{file_path}\nTask:')
+        print(*task, sep='\n', end='\n\n\n')
