@@ -45,10 +45,13 @@ for file_path, task in dict_of_tasks.items():
     if len(task) > 1:
         print(f'Path:\n{file_path}\nTasks:')
         # print(*task, sep='\n', end='\n\n\n')
+
         [print(line.rstrip()) for line in task]
         print('\n\n\n')
+
     elif len(task) == 1:
         print(f'Path:\n{file_path}\nTask:')
+        # print(*task, sep='\n', end='\n\n\n')
+
         [print(line.rstrip()) for line in task]
         print('\n\n\n')
-        # print(*task, sep='\n', end='\n\n\n')
